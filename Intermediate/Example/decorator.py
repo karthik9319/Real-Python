@@ -43,6 +43,18 @@ def better_repeat(_func=None, *, num_times=2):
         return decorator_repeat(func)
 
 
+def count_calls(func):
+    @functools.wraps(func)
+    def wrapper_count_calls(*args, **kwargs):
+        wrapper_count_calls.num_calls += 1
+        print(f"{wrapper_count_calls.num_calls} of {func.__name__!r}")
+        value = func(*args, **kwargs)
+        return value
+
+    wrapper_count_calls.num_calls = 0
+    return wrapper_count_calls
+
+
 @repeat(num_times=4)
 def greet(name):
     print(f"hello {name}")
@@ -58,5 +70,15 @@ def say_whee():
     print("hola hola")
 
 
-greet_world("karthik")
+# greet_world("karthik")
+# say_whee()
+
+
+@count_calls
+def say_whee():
+    print("hola hola")
+
+
+say_whee()
+say_whee()
 say_whee()
