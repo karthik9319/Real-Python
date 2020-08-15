@@ -4,7 +4,7 @@ class Circle:
         
     @property
     def radius(self):
-        return self.radius
+        return self._radius
     
     
     @radius.setter
@@ -33,3 +33,8 @@ class Circle:
     def pi():
         return 3.1415926535
     
+c = Circle(5)
+print(c.radius)
+print(c.area)
+print(c.cylinder_volume(height = 5))
+print(c.pi())
