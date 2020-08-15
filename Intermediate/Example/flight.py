@@ -8,6 +8,7 @@ def slow_time(func):
         time.sleep(1)
         value = func(*args, **kwargs)
         return value
+
     return wrapper_slow_time
 
 
@@ -17,8 +18,8 @@ def countdown(number):
         print("Lift off")
     else:
         print(number)
-        countdown(number -1)
-        
+        countdown(number - 1)
+
 
 if __name__ == "__main__":
     inp = int(input("Enter number: "))
