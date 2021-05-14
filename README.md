@@ -2,9 +2,11 @@
 
 Practising python
 
-- [OOPS](https://realpython.com/python3-object-oriented-programming/)
+## Day 1
 
-- [SQL Python](https://realpython.com/python-sql-libraries/)
+    - [OOPS](https://realpython.com/python3-object-oriented-programming/)
+
+    - [SQL Python](https://realpython.com/python-sql-libraries/)
 
 - [Decorators](https://realpython.com/primer-on-python-decorators/)
 
